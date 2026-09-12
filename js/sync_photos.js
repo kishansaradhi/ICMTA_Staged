@@ -12,12 +12,12 @@
 const fs = require('fs');
 const path = require('path');
 
-const cwd = __dirname;
-const memberDataFile = path.resolve(cwd, 'js/member-data.js');
-const appJsFile = path.resolve(cwd, 'js/app.js');
+const cwd = path.resolve(__dirname, '..');
+const memberDataFile = path.resolve(__dirname, 'member-data.js');
+const appJsFile = path.resolve(__dirname, 'app.js');
 
 if (!fs.existsSync(memberDataFile)) {
-  console.error('Error: js/member-data.js not found.');
+  console.error('Error: member-data.js not found.');
   process.exit(1);
 }
 
